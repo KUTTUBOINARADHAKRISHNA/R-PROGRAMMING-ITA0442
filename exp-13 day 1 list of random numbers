@@ -1,0 +1,20 @@
+13. Write a R program to create a list of random numbers in normal distribution and count occurrences of each value.  
+ 
+ INPUT :
+ 
+ n = floor(rnorm(1000, 50, 100))
+print('List of random numbers in normal distribution:')
+print(n)
+t = table(n)
+print("Count occurrences of each value:")
+print(t)
+
+output :
+
+n = floor(rnorm(1000, 50, 100))
+> print('List of random numbers in normal distribution:')
+[1] "List of random numbers in normal distribution:"
+> print(n)
+   [1]  230  -75  124  -77   99   -6   28  -53   61  112  -66  128  -13   17  -42  -67   56
+  [18]  -62    7  158   37  130   60 -139   74    3  173   88   55   95  271  217 -165   50
+  [35]  110   73  154   65 -103  -75   53  -62   68 -135
