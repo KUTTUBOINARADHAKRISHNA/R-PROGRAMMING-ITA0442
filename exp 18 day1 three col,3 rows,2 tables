@@ -1,0 +1,27 @@
+18. Write a R program to create an array with three columns, three rows, and two "tables", taking two  vectors as input to the array.  Print the array.  
+ 
+ INPUT :
+ 
+v1 = c(1, 3, 5, 7)
+v2 = c(2, 4, 6, 8, 10)
+arra1 = array(c(v1, v2),dim = c(3,3,2))
+print(arra1)
+
+OUT PUT :
+
+print(a)
+, , Part1
+
+     Row1 Row2 Row3
+Col1    6   10   14
+Col2    7   11   15
+Col3    8   12   16
+Col4    9   13   17
+
+, , Part2
+
+     Row1 Row2 Row3
+Col1   18   22   26
+Col2   19   23   27
+Col3   20   24   28
+Col4   21   25   29
