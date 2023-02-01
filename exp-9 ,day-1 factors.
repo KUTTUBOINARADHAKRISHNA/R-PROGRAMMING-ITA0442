@@ -1,0 +1,26 @@
+9. Write a R program to find the factors of a given number.  
+
+input :
+
+print_factors <- function(x) {
+  print(paste("The factors of",x,"are:"))
+  for(i in 1:x) {
+    if((x %% i) == 0) {
+      print(i)
+    }
+  }
+}
+
+ OUT PUT:
+ 
+ > print_factors(100)
+[1] "The factors of 100 are:"
+[1] 1
+[1] 2
+[1] 4
+[1] 5
+[1] 10
+[1] 20
+[1] 25
+[1] 50
+[1] 100
