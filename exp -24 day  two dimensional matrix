@@ -1,0 +1,22 @@
+4. Write a R program to create a two-dimensional 5x3 array of sequence of even
+integers greater than 50.
+
+input :
+
+array1 =  array(1:30, dim=c(3,4,2))
+print(array1)
+
+out put :
+
+
+     [,1] [,2] [,3] [,4]
+[1,]    1    4    7   10
+[2,]    2    5    8   11
+[3,]    3    6    9   12
+
+, , 2
+
+     [,1] [,2] [,3] [,4]
+[1,]   13   16   19   22
+[2,]   14   17   20   23
+[3,]   15   18   21   24
