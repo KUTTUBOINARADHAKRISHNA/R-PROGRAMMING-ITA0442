@@ -1,0 +1,29 @@
+12. Write a R program to extract the five of the levels of factor created from a
+random sample from the LETTERS (Part of the base R distribution.)
+
+input :
+
+L = sample(LETTERS,size=50,replace=TRUE)
+print("Original data:")
+print(L)
+f = factor(L)
+print("Original factors:")
+print(f)
+print("Only five of the levels")
+print(table(L[1:5]))
+
+output :
+
+ [1] "Y" "G" "X" "H" "Q" "V" "Y" "T" "J" "A" "C" "B" "C" "W" "V" "S" "R" "I" "A" "T" "B" "C" "Z" "C" "B" "K" "X"
+[28] "C" "T" "P" "Z" "N" "G" "G" "I" "O" "J" "A" "V" "Q" "B" "H" "B" "T" "U" "F" "K" "H" "F" "V"
+> f = factor(L)
+> print("Original factors:")
+[1] "Original factors:"
+> print(f)
+ [1] Y G X H Q V Y T J A C B C W V S R I A T B C Z C B K X C T P Z N G G I O J A V Q B H B T U F K H F V
+Levels: A B C F G H I J K N O P Q R S T U V W X Y Z
+> print("Only five of the levels")
+[1] "Only five of the levels"
+> print(table(L[1:5]))
+G H Q X Y 
+1 1 1 1 1 
