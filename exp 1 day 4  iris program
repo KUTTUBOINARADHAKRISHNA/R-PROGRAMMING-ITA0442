@@ -1,0 +1,15 @@
+1.Randomly Sample the iris dataset such as 80% data for training and 20% for test and create
+Logistics regression with train data, use species as target and petals width and
+length as feature variables , Predict the probability of the model using test data, Create
+Confusion matrix for above test model
+
+program :
+
+set.seed(123) 
+indices <- sample(1:nrow(iris), round(0.8 * nrow(iris)))
+train_data <- iris[indices, c("Petal.Width", "Petal.Length", "Species")]
+test_data <- iris[-indices, c("Petal.Width", "Petal.Length", "Species")]
+model <- glm(Species ~ Petal.Width + Petal.Length, data = train_data, family = "binomial")
+test_data$probability <- predict(model, newdata = test_data, type = "response")
+predictions <- ifelse(test_data$probability > 0.5, "versicolor", "virginica")
+table(predictions, test_data$Species)
