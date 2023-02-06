@@ -1,0 +1,14 @@
+Explore the airquality dataset. It contains daily air quality measurements from New York during 
+a period of five months: • Ozone: mean ozone concentration (ppb), • Solar.R: solar radiation 
+(Langley), • Wind: average wind speed (mph), • Temp: maximum daily temperature in degrees 
+Fahrenheit, • Month: numeric mon
+
+program :
+
+data(airquality)
+str(airquality)
+summary(airquality)
+library(ggplot2)
+ggplot(airquality, aes(x = Ozone, y = Solar.R)) +
+  geom_point() +
+  ggtitle("Relationship between Ozone and Solar Radiation")
