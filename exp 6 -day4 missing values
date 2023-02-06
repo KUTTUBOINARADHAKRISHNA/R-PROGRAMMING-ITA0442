@@ -1,0 +1,20 @@
+6.(i) Find any missing values(na) in features and drop the missing values if its less than 10% else 
+replace that with mean of that feature. (ii) Apply a linear regression algorithm using Least Squares 
+Method on “Ozone” and “Solar.R” (iii)Plot Scatter plot between Ozone and Solar and add 
+regression line created by above model
+
+program :
+
+
+data(ChickWeight)
+
+ordered_data <- ChickWeight[order(ChickWeight$Weight), ]
+grouped_data <- group_by(ordered_data, Diet)
+
+tail(grouped_data, 6)
+
+library(reshape2)
+
+melted_data <- melt(ChickWeight, id.vars = c("Chick", "Time", "Diet"))
+
+mean_cast_data <- dcast(melted_data, Diet ~ variable, mean)
