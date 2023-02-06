@@ -1,0 +1,20 @@
+7. Load dataset named ChickWeight, ( i).Order the data frame, in ascending order by feature name 
+“weight” grouped by feature “diet” and Extract the last 6 records from order data frame. (ii).a 
+Perform melting function based on “Chick", "Time", "Diet" features as ID variables b. Perform cast 
+function to display the mean value of weight grouped by Diet c. Perform cast function to display 
+the mode of weight grouped by Die
+
+
+program :
+
+
+data(ChickWeight)
+ordered_data <- ChickWeight[order(ChickWeight$Weight), ]
+grouped_data <- group_by(ordered_data, Diet)
+
+tail(grouped_data, 6)
+
+library(reshape2)
+melted_data <- melt(ChickWeight, id.vars = c("Chick", "Time", "Diet"))
+mean_cast_data <- dcast(melted_data, Diet ~ variable, mean)
+mode_cast_data <- dcast(melted_data, Diet ~ variable, function(x) names(sort(-table(x)))[1])
