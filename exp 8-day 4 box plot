@@ -1,0 +1,18 @@
+8. a. Create Box plot for “weight” grouped by “Diet” b. Create a Histogram for “weight” features 
+belong to Diet- 1 category c. Create Scatter plot for “ weight” vs “Time” grouped by Die
+
+program :
+
+library(ggplot2)
+
+ggplot(ChickWeight, aes(x = Diet, y = Weight)) + 
+  geom_boxplot() + 
+  ggtitle("Box Plot of Weight by Diet")
+
+ggplot(ChickWeight[ChickWeight$Diet == 1, ], aes(x = Weight)) + 
+  geom_histogram() + 
+  ggtitle("Histogram of Weight in Diet-1")
+
+ggplot(ChickWeight, aes(x = Time, y = Weight, color = factor(Diet))) + 
+  geom_point() + 
+  ggtitle("Scatter Plot of Weight vs Time Grouped by Diet")
