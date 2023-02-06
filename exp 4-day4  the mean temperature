@@ -1,0 +1,15 @@
+i. Compute the mean temperature(don’t use build in function) ii.Extract the first five rows from 
+airquality. iii.Extract all columns from airquality except Temp and Wind iv.Which was the coldest 
+day during the period? v.How many days was the wind speed greater than 17 m
+
+program :
+
+data(airquality)
+mean_temp <- sum(airquality$Temp) / nrow(airquality)
+mean_temp
+head(airquality, 5)
+airquality[, !(names(airquality) %in% c("Temp", "Wind"))]
+coldest_day <- which.min(airquality$Temp)
+airquality[coldest_day, c("Day", "Month", "Temp")]
+wind_count <- sum(airquality$Wind > 17)
+wind_count
