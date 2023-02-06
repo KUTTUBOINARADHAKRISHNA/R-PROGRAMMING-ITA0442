@@ -1,0 +1,13 @@
+(ii)Write R function to find the range of
+given vector. Range=Max-Min
+Sample input, C<-(9,8,7,6,5,4,3,2,1),
+output=8
+
+
+program :
+
+data = c(9,8,7,6,5,4,3,2,1, NA)
+
+print(data)
+
+print(max(data, na.rm=TRUE)-min(data, na.rm=TRUE))
