@@ -1,0 +1,16 @@
+ Writesuitable R code to compute the mean, median ,mode of the following values
+ c(90, 50, 70, 80, 70, 60, 20, 30,80, 90, 20,75,70,10,60,70,85,95,55,15)      
+
+program :
+
+x <- c(90, 50, 70, 80, 70, 60, 20, 30,
+       80, 90, 20,75,70,10,60,70,85,95,55,15)      
+median.result <- median(x)
+print(median.result)
+
+
+out put :
+
+> median.result <- median(x)
+> print(median.result)
+[1] 70
