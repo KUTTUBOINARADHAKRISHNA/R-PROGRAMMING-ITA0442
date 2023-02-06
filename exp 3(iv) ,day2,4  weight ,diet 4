@@ -1,0 +1,6 @@
+(iv) Create a Histogram for  “Weight” features  belong to Diet- 4 category
+
+program :
+
+hist(ChickWeight$weight[ChickWeight$Diet=='4']
+     ,breaks = 30,main = 'Histogram: Weight for Diet 4')
